@@ -1,0 +1,12 @@
+@use "../../styles/constants.module.scss" as constants;
+@use "../../styles/functions.module.scss" as functions;
+@use "../../styles/mixin.module.scss" as mixin;
+
+.nav {
+  &__list {
+    display: flex;
+    column-gap: functions.rem(40);
+    &__item {
+    }
+  }
+}
