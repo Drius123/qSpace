@@ -21,6 +21,9 @@ export default function Menu() {
         <Link to="*">
           <li className={styles.nav__item}>{EnumText.MENU_TEXT_FIFTH}</li>{" "}
         </Link>
+        <Link to="*">
+          <li className={styles.nav__item}>{EnumText.MENU_TEXT_TELEPHONE}</li>{" "}
+        </Link>
       </ul>
     </nav>
   );

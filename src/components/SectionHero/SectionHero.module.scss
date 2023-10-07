@@ -1,0 +1,92 @@
+@use "../../styles/constants.module.scss" as constants;
+@use "../../styles/functions.module.scss" as functions;
+@use "../../styles/mixin.module.scss" as mixin;
+
+.section-hero {
+  background-color: constants.$bgColorMain;
+  padding-bottom: functions.rem(100);
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    .label-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .logo {
+        color: constants.$whiteColor;
+        font-family: constants.$fontMiracle;
+        @include mixin.adaptiveClamp(
+          $property: font-size,
+          $startSize: 220,
+          $minSize: 60
+        );
+        font-style: normal;
+        font-weight: 400;
+        line-height: functions.rem(200);
+        @include mixin.pseudocell(after, $pos: relative) {
+          content: "Hotel";
+          color: constants.$hotelColor;
+        }
+      }
+
+      .items {
+        color: constants.$hotelColor;
+        font-family: constants.$fontHelvetica;
+        font-size: functions.rem(18);
+        @include mixin.adaptiveClamp(
+          $property: font-size,
+          $startSize: 18,
+          $minSize: 12
+        );
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
+
+    .inf-wrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: functions.rem(96);
+      @include mixin.adaptiveClamp(
+        $property: width,
+        $startSize: 350,
+        $minSize: 200
+      );
+
+      .label {
+        display: flex;
+        align-items: center;
+        padding-left: functions.rem(30);
+        column-gap: functions.rem(23);
+        border-radius: functions.rem(70);
+        border: functions.rem(1) solid constants.$whiteColor;
+        width: functions.rem(249);
+        height: functions.rem(70);
+        color: constants.$whiteColor;
+        font-family: constants.$fontHelvetica;
+        font-size: functions.rem(22);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+
+      .hotel-inf {
+        color: constants.$whiteColor;
+        font-family: constants.$fontHelvetica;
+        font-size: functions.rem(18);
+        font-style: normal;
+        font-weight: 400;
+        line-height: functions.rem(28);
+        opacity: 0.8;
+      }
+    }
+
+    .btn {
+    }
+  }
+}

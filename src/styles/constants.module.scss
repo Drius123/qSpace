@@ -1,15 +1,20 @@
 $maxWidth: 1920;
-$maxWidthContainer: 1280;
-$containerWidth: 1180;
-$tableWidth: 768;
+$maxWidthContainer: 1860;
+$containerWidth: 1760;
+$tableWidth: 1024;
+$mobileWidth: 375;
 $minWidth: 320;
 
 $mainOffset: 50;
 $mainFont: "Montserrat";
+$fontHelvetica: "Helvetica Neue LT Std";
+$fontMiracle: "Miracle";
 $mainWeight: 400;
 
 $whiteColor: rgb(255, 255, 255);
+$hotelColor: #fcd043;
 $redColor: rgb(255, 0, 0);
+$bgColorMain: #313f38;
 
 $fontFamily: $mainFont, sans-serif;
 $fontStyle: normal;

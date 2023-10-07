@@ -3,8 +3,18 @@
 @use "../../styles/mixin.module.scss" as mixin;
 
 .header {
+  background-color: constants.$bgColorMain;
+  padding-top: functions.rem(40);
+  padding-bottom: functions.rem(82);
   .header-content {
     display: flex;
     justify-content: space-between;
+    color: constants.$whiteColor;
+    font-family: constants.$fontHelvetica;
+    font-size: functions.rem(20);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
   }
 }
