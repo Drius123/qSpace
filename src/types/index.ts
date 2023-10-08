@@ -10,6 +10,11 @@ export enum EnumText {
   TEXT_ITEMS = "rooms // restaurant // congress hall // wine bar",
   TEXT_SINCE = "since 1973",
   TEXT_HOTEL_INF = "The luxurious hotel in the most beautiful European city with an exclusive restaurant, conference-hall, and art-bar.",
+  TEXT_ADRESS = "8 Lystopadovoho Chynu,Lviv",
+  TEXT_SECOND_ADRESS = "Art & Congress hall",
+  TEXT_CHECK_IN = "CHECK IN",
+  TEXT_CHECK_OUT = "CHECK OUT",
+  TEXT_BOOK_ROOM = "BOOK ROOM",
 }
 
 export interface SomeInt {

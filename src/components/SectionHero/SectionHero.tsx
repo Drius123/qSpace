@@ -1,4 +1,5 @@
 import star from "../../assets/Star 8.svg";
+import btn from "../../assets/button.svg";
 import { EnumText } from "../../types";
 import styles from "./SectionHero.module.scss";
 
@@ -19,7 +20,7 @@ export default function SectionHero() {
             <p className={styles["hotel-inf"]}>{EnumText.TEXT_HOTEL_INF}</p>
           </div>
           <button type="button" className={styles.btn}>
-            <span className={styles["span-1"]} />
+            <img src={btn} alt="btn-img" />
           </button>
         </div>
       </div>

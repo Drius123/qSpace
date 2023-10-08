@@ -1,0 +1,105 @@
+@use "../../styles/constants.module.scss" as constants;
+@use "../../styles/functions.module.scss" as functions;
+@use "../../styles/mixin.module.scss" as mixin;
+
+.section-preview {
+  background-color: constants.$bgColorMain;
+  padding-bottom: functions.rem(115);
+
+  .section-content {
+    .content-img {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      background-image: url("../../assets/preview-img.png");
+      height: functions.rem(781);
+
+      .btns {
+        display: flex;
+        @include mixin.adaptiveClamp(
+          $property: width,
+          $startSize: 1106,
+          $minSize: 858
+        );
+        height: functions.rem(100);
+        opacity: 0.9;
+        background: constants.$bgBtn;
+        backdrop-filter: blur(functions.rem(20));
+
+        .btn {
+          flex-grow: 1;
+
+          @include mixin.first {
+            margin-top: functions.rem(18);
+            height: functions.rem(64);
+            border-right: 1px solid constants.$whiteColor;
+          }
+
+          @include mixin.notLast {
+            position: relative;
+            color: constants.$whiteColor;
+            font-family: constants.$fontHelvetica;
+            font-size: functions.rem(16);
+            font-style: normal;
+            font-weight: 500;
+            line-height: functions.rem(20);
+            text-transform: uppercase;
+            @include mixin.pseudocell(after) {
+              margin-top: functions.rem(8);
+              background-color: constants.$hotelColor;
+              width: functions.rem(10);
+              height: functions.rem(1);
+              right: functions.rem(18);
+              transform: rotate(-45deg);
+            }
+            @include mixin.pseudocell(before) {
+              margin-top: functions.rem(8);
+              background-color: constants.$hotelColor;
+              width: functions.rem(10);
+              height: functions.rem(1);
+              right: functions.rem(25);
+              transform: rotate(45deg);
+            }
+          }
+
+          @include mixin.last {
+            background: constants.$hotelColor;
+            color: constants.$textColorBtn;
+            text-align: center;
+            font-family: constants.$fontHelvetica;
+            font-size: functions.rem(18);
+            font-style: normal;
+            font-weight: 500;
+            line-height: functions.rem(20);
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .content-hotel-inf {
+      display: flex;
+      justify-content: space-between;
+      padding-top: functions.rem(100);
+      color: constants.$whiteColor;
+      font-family: constants.$fontHelvetica;
+      font-size: functions.rem(26);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+
+      .contact {
+        .telephone {
+          color: constants.$hotelColor;
+        }
+      }
+
+      .adress {
+        width: functions.rem(251);
+        text-align: right;
+      }
+    }
+  }
+}
