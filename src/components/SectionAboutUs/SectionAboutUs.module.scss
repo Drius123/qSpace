@@ -1,0 +1,93 @@
+@use "../../styles/constants.module.scss" as constants;
+@use "../../styles/functions.module.scss" as functions;
+@use "../../styles/mixin.module.scss" as mixin;
+
+.section-about-us {
+  background-color: constants.$bgColorMain;
+  .section-content {
+    display: flex;
+    justify-content: space-between;
+    .about-us-content {
+      display: flex;
+      column-gap: functions.rem(162);
+      position: relative;
+      overflow: hidden;
+      .about-us-img {
+        padding-top: functions.rem(191);
+        position: relative;
+        z-index: 2;
+      }
+      .line {
+        position: absolute;
+        left: 0;
+        @include mixin.adaptiveClamp(
+          $property: width,
+          $startSize: 1417,
+          $minSize: 274
+        );
+        @include mixin.adaptiveClamp(
+          $property: height,
+          $startSize: 1417,
+          $minSize: 274
+        );
+        border-radius: functions.rem(1000);
+        border-top: functions.rem(1) solid constants.$colorStroke;
+      }
+      .about-us-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: functions.rem(189);
+        border-right: functions.rem(1) solid constants.$colorStroke;
+        border-top: functions.rem(1) solid constants.$colorStroke;
+        position: relative;
+        z-index: 2;
+        h2 {
+          padding-right: functions.rem(115);
+          color: constants.$hotelColor;
+          text-align: right;
+          font-family: constants.$fontMiracle;
+          font-size: functions.rem(150);
+          font-style: normal;
+          font-weight: 400;
+          line-height: functions.rem(130);
+          text-transform: uppercase;
+          @include mixin.last {
+            color: constants.$whiteColor;
+          }
+          @include mixin.first {
+            padding-top: functions.rem(191);
+          }
+        }
+
+        h3 {
+          color: constants.$whiteColor;
+          font-family: constants.$fontMiracle;
+          font-size: functions.rem(50);
+          font-style: normal;
+          font-weight: 400;
+          line-height: functions.rem(60);
+          letter-spacing: functions.rem(1.5);
+          text-transform: capitalize;
+        }
+
+        span {
+          padding-top: functions.rem(41);
+          display: block;
+          width: functions.rem(400);
+          color: constants.$whiteColor;
+          font-family: constants.$fontHelvetica;
+          font-size: functions.rem(18);
+          font-style: normal;
+          font-weight: 400;
+          line-height: functions.rem(28);
+          opacity: 0.64;
+        }
+      }
+    }
+
+    .rooms-check {
+      border-top: functions.rem(1) solid constants.$colorStroke;
+      padding-top: functions.rem(106);
+    }
+  }
+}
